@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
         list_head *insn = get_insn(&data, &list);
 
         if (insn != NULL) print_insn(&data, code, insn);
-
+        
+        data.address += data.read;
         code = data.code;
         read += data.read;
         data.read = 0;
